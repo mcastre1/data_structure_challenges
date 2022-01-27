@@ -8,6 +8,11 @@ def anagram(s1, s2):
     a = s1.lower().replace(" ", "")
     b = s2.lower().replace(" ", "")
 
+    # Edge Case
+    # Return false if the length of both strings is not the same
+    if len(s1) != len(s2):
+        return False
+
     # Convert the above strings into dictionaries
     dict_a = convert_dict(a)
     dict_b = convert_dict(b)
