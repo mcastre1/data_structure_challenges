@@ -2,9 +2,13 @@ from distutils import command
 
 
 def command_list():
+    """ Hackerrank, function performs commands on list from user input.
+    """
+    # First integer from user will be the number of commands to be expected
     N = int(input())
     arr = []
     
+    # Splitting each command and checking which one it is
     for _ in range(N):
         command = input().split(" ")
         if command[0] == "insert":
@@ -21,10 +25,6 @@ def command_list():
             arr.pop()
         elif command[0] == "reverse":
             arr.reverse()
-
-    #print(arr)
-
-    
 
 
 command_list()
